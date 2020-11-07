@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3> STUDENT LIST</h3>
+<table class="table table-borderless">
+ <thead class="order-bottom font-weight-bold">
+    <tr>
+        <td>Roll</td>
+        <td>Full Name </td>
+        <td>Deptt.</td>
+        <td>Present</td>
+        <td>Total_Class</td>
+        <td><a href="{% url 'insert' %}"class="btn btn-success px-0">Add</a></td>
+    </tr>
+ </thead>
+<tbody>
+    {% for student in context %}
+     <tr>
+         <td>{{student.roll_no}}</td>
+         <td>{{student.fullname}}</td>
+         <td>{{student.clas}}</td>
+         <td>{{student.present}}</td>
+         <td>{{student.total_class}}</td>
+<!--         <td>{{student.id}}</td>-->
+         <td><a href="{% url 'update' student.id %}"class="btn btn-primary px-0">Present</a></td>
+     </tr>
+
+     {% endfor %}
+</tbody>
+</table>
+{% endblock %}

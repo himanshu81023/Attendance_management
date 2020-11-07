@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="/student/form/" method="post" autocomplete="off">
+ {% csrf_token %}
+     {{form|crispy}}
+ <input type="submit" class="btn btn-success">
+</form>
+{% endblock content %}
+<!--<form action="/student/form/" method="post" autocomplete="off" >-->
+<!-- -->
+<!-- <div class="form-group">-->
+<!-- <label for="id_fullname">Fullname:</label>-->
+<!-- <input type="text" name="fullname" maxlength="100" required="" id="id_fullname" class="form-control">-->
+<!-- <label for="id_roll_no">Roll no:</label>-->
+<!-- <input type="text" name="roll_no" maxlength="7" required="" id="id_roll_no" class="form-control">-->
+<!--  <div class="row">-->
+<!--   <div class="col">-->
+<!--  <label for="id_present">Present:</label>-->
+<!-- <input type="number" name="present" required="" id="id_present" class="form-control">-->
+<!--   </div>-->
+<!--   <div class="col">-->
+<!-- <label for="id_total_class">Total class:</label>-->
+<!-- <input type="number" name="total_class" required="" id="id_total_class" class="form-control">-->
+<!--   </div>-->
+<!--  </div>-->
+<!-- <label for="id_clas">Class:</label>-->
+<!-- <select name="clas" required="" id="id_clas" class="form-control">-->
+<!-- <option value="" selected="">-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</option>-->
+<!--</select>-->
+<!--  <div >-->
+<!--   <hr>-->
+<!-- <input type="submit" class="btn btn-success">-->
+<!--  </div>-->
+<!-- </div>-->
+<!--</form>-->
